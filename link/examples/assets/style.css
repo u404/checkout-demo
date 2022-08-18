@@ -1,0 +1,140 @@
+html {
+  height: 100%;
+  box-sizing: border-box;
+  background-color: #f5f5fc;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
+  color: #00122c;
+}
+
+.btn {
+  border: 0;
+  border-radius: 8px;
+  width: 95vw;
+  padding: 12px;
+  font: inherit;
+  font-size: 14px;
+  line-height: 1.72;
+  font-weight: 500;
+  color: #ffffc8;
+  background-color: #0c1142;
+  cursor: pointer;
+}
+
+.btn:hover:enabled {
+  background-color: #3d4169;
+}
+
+.btn:active {
+  background-color: #00122c;
+}
+
+.btn:disabled {
+  cursor: default;
+}
+
+#request-details {
+  width: 100%;
+  background-color: #f5f5fc;
+  margin-bottom: 20px;
+}
+
+#payment-link-pre {
+  height: 100%;
+}
+
+.fade-in {
+  -webkit-animation: fadeIn ease 500ms;
+  animation: fadeIn ease 500ms;
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.fade-out {
+  -webkit-animation: fadeOut ease 500ms;
+  animation: fadeOut ease 500ms;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+#submit-btn {
+  position: relative;
+}
+
+#spinner {
+  display: none;
+  position: absolute;
+  top: 0.75rem;
+  right: 1.125rem;
+  -webkit-animation: rotate 1s linear infinite;
+  animation: rotate 1s linear infinite;
+}
+
+@-webkit-keyframes rotate {
+  from {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+
+@keyframes rotate {
+  from {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}

@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html lang="en" id="payment-links">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <base href="/link/" />
+    <title>Checkout Payment Links Example</title>
+    <link rel="stylesheet" href="examples/assets/style.css" />
+    <link rel="stylesheet" href="examples/assets/normalize.css" />
+    <link rel="stylesheet" href="examples/assets/prism-custom.min.css" />
+    <script src="https://unpkg.com/unfetch/polyfill"></script>
+    <script src="https://cdn.jsdelivr.net/npm/promise-polyfill@8/dist/polyfill.min.js"></script>
+    <script src="https://unpkg.com/uuid@latest/dist/umd/uuidv4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+  </head>
+
+  <body>
+    <div id="request-details" class="light">
+      <pre class="language-json" id="payment-link-pre"></pre>
+    </div>
+    <button class="btn" id="submit-btn">
+      <span id="button-text">Generate payment link</span>
+      <img
+        alt="Spinner"
+        id="spinner"
+        src="examples/assets/loading-spinner.svg"
+        aria-hidden="true"
+      />
+    </button>
+    <p id="message"></p>
+
+    <script src="examples/assets/prism.min.js"></script>
+    <script src="examples/assets/plink.js"></script>
+    <script src="examples/docs/assets/app.js"></script>
+  </body>
+</html>
