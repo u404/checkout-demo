@@ -40,24 +40,25 @@ var defaultConfig = {
 };
 
 function getHppApiUrlBase() {
-  switch (window.location.hostname) {
-    case 'localhost': {
-      if (window.location.port === '3001') {
-        return 'http://localhost:3001';
-      }
+  // switch (window.location.hostname) {
+  //   case 'localhost': {
+  //     if (window.location.port === '3001') {
+  //       return 'http://localhost:3001';
+  //     }
 
-      return 'http://localhost:3000';
-    }
+  //     return 'http://localhost:3000';
+  //   }
 
-    case 'pay.checkout.com':
-      return 'https://api.checkout.com';
+  //   case 'pay.checkout.com':
+  //     return 'https://api.checkout.com';
 
-    case 'pay.sandbox.checkout.com':
-      return 'https://api.sandbox.checkout.com';
+  //   case 'pay.sandbox.checkout.com':
+  //     return 'https://api.sandbox.checkout.com';
 
-    default:
-      return window.location.origin;
-  }
+  //   default:
+  //     return window.location.origin;
+  // }
+  return 'https://api.sandbox.checkout.com';
 }
 
 window.createHPPRedirect = createHPPRedirect;

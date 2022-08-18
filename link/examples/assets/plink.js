@@ -6,28 +6,30 @@ var PAYMENT_LINKS_URL = URL_BASE + PAYMENT_LINKS_PATH;
 var FADEOUT_TIME_IN_MS = 500;
 
 function getApiURLBase() {
-  switch (window.location.hostname) {
-    case 'localhost': {
-      if (window.location.port === '4001') {
-        return 'http://localhost:4001';
-      }
+  // switch (window.location.hostname) {
+  //   case 'localhost': {
+  //     if (window.location.port === '4001') {
+  //       return 'http://localhost:4001';
+  //     }
 
-      if (window.location.port === '3000') {
-        return 'http://localhost:3000';
-      }
+  //     if (window.location.port === '3000') {
+  //       return 'http://localhost:3000';
+  //     }
 
-      return 'api';
-    }
+  //     return 'api';
+  //   }
 
-    case 'pay.checkout.com':
-      return 'https://api.checkout.com';
+  //   case 'pay.checkout.com':
+  //     return 'https://api.checkout.com';
 
-    case 'pay.sandbox.checkout.com':
-      return 'https://api.sandbox.checkout.com';
+  //   case 'pay.sandbox.checkout.com':
+  //     return 'https://api.sandbox.checkout.com';
 
-    default:
-      return 'api';
-  }
+  //   default:
+  //     return 'api';
+  // }
+
+  return 'https://api.sandbox.checkout.com';
 }
 
 window.launchPlink = launchPlink;
